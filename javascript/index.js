@@ -1,30 +1,15 @@
-var menu = function() {
-    var isMenuOpen = false;
-    $('.menu-button').click(function() {
-        $(this).toggleClass('open', 200);
-        if (isMenuOpen === false) {
-            $('nav').stop();
-            $('nav').animate({
-                left: '6vw'
-            }, 200);
-            $('.menu-cover').animate({
-                bottom: '0'
-            }, 150);
+var navButton = document.getElementById('nav-button'),
+	nav = document.getElementsByTagName('nav')[0],
+    navBar = document.getElementById('nav-bar');
 
-            isMenuOpen = true;
-        }
-        else {
-            $('nav').stop();
-            $('nav').animate({
-                left: '100vw'
-            }, 200);
-            $('.menu-cover').animate({
-                bottom: '100vh'
-            }, 150);
-
-            isMenuOpen = false;
-        }
-    });
+navButton.onclick = function() {
+	if (navButton.className === 'open') {
+		navButton.className = '';
+		nav.className = '';
+        navBar.className = '';
+	} else {
+		navButton.className = 'open';
+		nav.className = 'open';
+        navBar.className = 'open';
+	}
 };
-
-addEventListener('load', menu);

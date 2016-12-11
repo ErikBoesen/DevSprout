@@ -1,13 +1,13 @@
 var menu = function() {
     var isMenuOpen = false;
-    $('.menu-button').click(function() {
+    $('#nav-button').click(function() {
         $(this).toggleClass('open', 200);
         if (isMenuOpen === false) {
             $('nav').stop();
             $('nav').animate({
                 right: '6vw'
             }, 200);
-            $('.menu-cover').animate({
+            $('#nav-bar').animate({
                 bottom: '0'
             }, 150);
 
@@ -18,7 +18,7 @@ var menu = function() {
             $('nav').animate({
                 right: '100vw'
             }, 200);
-            $('.menu-cover').animate({
+            $('#nav-bar').animate({
                 bottom: '100vh'
             }, 150);
 

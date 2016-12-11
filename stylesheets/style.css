@@ -75,7 +75,7 @@ article {
     background: white;
     padding: 50px;
 }
-.menu-button {
+#nav-button {
     width: 50px;
     height: 45px;
     position: fixed;
@@ -85,8 +85,9 @@ article {
     transition: .5s ease-in-out;
     cursor: pointer;
     z-index: 100;
+    transition: .4s;
 }
-.menu-button span {
+#nav-button span {
     display: block;
     position: absolute;
     height: 3px;
@@ -97,34 +98,42 @@ article {
     transform: rotate(0deg);
     transition: .25s ease-in-out;
 }
-.menu-button span:nth-child(1) {
+#nav-button.open span {
+    transition: .4s;
+}
+#nav-button span:nth-child(1) {
     top: 0px;
 }
-.menu-button span:nth-child(2) {
+#nav-button span:nth-child(2) {
     top: 15px;
 }
-.menu-button span:nth-child(3) {
+#nav-button span:nth-child(3) {
     top: 30px;
 }
-.menu-button.open span:nth-child(1) {
+#nav-button.open span:nth-child(1) {
     top: 18px;
     transform: rotate(135deg);
 }
-.menu-button.open span:nth-child(2) {
+#nav-button.open span:nth-child(2) {
     opacity: 0;
     left: -60px;
 }
-.menu-button.open span:nth-child(3) {
+#nav-button.open span:nth-child(3) {
     top: 18px;
     transform: rotate(-135deg);
 }
-.menu-cover {
+#nav-bar {
     width: 6vw;
     height: 100vh;
     position: fixed;
     bottom: 100vh;
     background: #222;
     z-index: 50;
+    transition: .4s;
+}
+#nav-bar.open {
+    bottom: 0;
+    transition: .4s;
 }
 nav {
     position: fixed;
@@ -132,6 +141,11 @@ nav {
     margin: 0;
     left: 100vw;
     z-index: 100;
+    transition: .4s;
+}
+nav.open {
+    left: 6vw;
+    transition: .4s;
 }
 nav ul {
     height: 100vh;

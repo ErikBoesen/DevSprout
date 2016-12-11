@@ -1,13 +1,13 @@
-.menu-button {
+#nav-button {
     top: auto;
     left: auto;
     bottom: 15px;
     right: 15px;
 }
-.menu-button span {
+#nav-button span {
     background: #333;
 }
-.menu-cover {
+#nav-bar {
     background: white;
     right: 0;
 }
