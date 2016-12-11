@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>The Country &#124; The Comoros</title>
+    <meta name="author" content="Paulo Costa">
+    <meta name="description" content="A description of the Comoros' role in today's world.">
+    <meta name="keywords" content="comoros, comoros today, comoros vanilla, comoros">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="img/png" href="images/favicon.png">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style>
+        .landing {
+            background-image: url("images/market.jpg");
+            background-size: cover;
+        }
+        
+        article {
+            background-color: white;
+            font-family: sans-serif;
+        }
+        
+        section {
+            height: 100vh;
+        }
+        
+        section div {
+            border: 2px solid white;
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+            margin: 0 0 0 58vw;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        section h2 {
+            font-size: 10em;
+            font-family: "Open Sans", sans-serif;
+            padding: 20vh 0 5px 20vw;
+            margin: 0 -100px -150px 0;
+        }
+        
+        section p {
+            font-size: 2em;
+            font-family: "Open Sans", sans-serif;
+            padding: 0 0 10vh 10vw;
+        }
+        
+        section:first-child div {
+            background-image: url("images/vanilla.jpg");
+        }
+        
+        section:first-child {
+            border-bottom: 1px solid black;
+        }
+        
+        section:last-child div {
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Franz_Sikora_038.jpg/220px-Franz_Sikora_038.jpg");
+        }
+        
+        section p:first-letter {
+            margin-left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="landing">
+        <div class="overlay">
+            <h1>What does it do?</h1>
+            <p>Among one of the poorest countries of the world, the Comoros does nonetheless have a large export and farming industry, among other things.</p>
+        </div>
+    </div>
+    <article>
+        <section>
+            <h2>Exports</h2>
+            <div title="A vanilla plant."></div>
+            <p>The Comoros' main economic power comes from exports.
+                <br> Their main exports are vanilla and cloves, with some other spices thrown in as well. They are the
+                <br>tenth-largest exporter of vanilla in the world, impressive for their size.</p>
+            <a class="button" href="http://translate.googleusercontent.com/translate_c?depth=1&amp;hl=en&amp;prev=search&amp;rurl=translate.google.com&amp;sl=fr&amp;u=http://www.beit-salam.km/article.php3%3Fid_article%3D26%26artsuite%3D2&amp;usg=ALkJrhhUeT0DaqBIo333fW_02uKMm06IVQ">Find Out More</a>
+        </section>
+        <section>
+            <h2>History</h2>
+            <div title="The last native ruler of the islands."></div>
+            <p>The Comoros were originally a Portuguese settlement, due to the Portuguese base in Madagascar. However, the French took it over and still hold a portion of the archipelago: the island of Mayotte.</p>
+            <a class="button" href="https://en.wikipedia.org/wiki/Comoros#History">Find Out More</a>
+        </section>
+    </article>
+    <script>
+        $(window).scroll(function () {
+            var wScroll = $(window).scrollTop();
+            $(".overlay").animate({
+                transform: "translate(0," + wScroll * 5 + "px)"
+            });
+        });
+    </script>
+</body>
+
+</html>
