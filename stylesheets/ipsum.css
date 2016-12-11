@@ -1,0 +1,54 @@
+.menu-button {
+    top: auto;
+    left: auto;
+    bottom: 15px;
+    right: 15px;
+}
+.menu-button span {
+    background: #333;
+}
+.menu-cover {
+    background: white;
+    right: 0;
+}
+nav {
+    left: auto;
+    right: 100vw;
+}
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+article img {
+    width: 100%;
+}
+h3 {
+    font-size: 8em;
+    color: #333;
+    text-align: center;
+    font-weight: 100;
+}
+.column-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.column {
+    width: 25vw;
+    margin: 10px;
+    text-align: justify;
+    color: #333;
+}
+@media (min-width: 1000px) {
+    h3 {
+        transform: rotate(-90deg);
+        line-height: 0;
+        position: fixed;
+        left: -.5em;
+        top: 34%;
+    }
+    article {
+        padding-left: 8em;
+    }
+}

@@ -1,0 +1,194 @@
+@font-face {
+    font-family: "Bebas Neue";
+    font-weight: bold;
+    src: url(../font/BebasNeue-Bold.otf) format("opentype");
+    unicode-range: U+0000-00FF;
+}
+@font-face {
+    font-family: "Bebas Neue";
+    font-weight: normal;
+    src: url(../font/BebasNeue-Regular.otf) format("opentype");
+    unicode-range: U+0000-00FF;
+}
+@font-face {
+    font-family: "Bebas Neue";
+    font-weight: 400;
+    src: url(../font/BebasNeue-Book.otf) format("opentype");
+    unicode-range: U+0000-00FF;
+}
+@font-face {
+    font-family: "Bebas Neue";
+    font-weight: 300;
+    src: url(../font/BebasNeue-Light.otf) format("opentype");
+    unicode-range: U+0000-00FF;
+}
+@font-face {
+    font-family: "Bebas Neue";
+    font-weight: 100;
+    src: url(../font/BebasNeue-Thin.otf) format("opentype");
+    unicode-range: U+0000-00FF;
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+.bg {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1000;
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+}
+header {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .3);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    font-family: "Bebas Neue", "Open Sans", sans-serif;
+}
+h1 {
+    font-size: 8em;
+    transform: rotate(5deg);
+}
+h2 {
+    transform: rotate(-2deg);
+}
+article {
+    background: white;
+    padding: 50px;
+}
+.menu-button {
+    width: 50px;
+    height: 45px;
+    position: fixed;
+    top: 20px;
+    left: 15px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    z-index: 100;
+}
+.menu-button span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: white;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+.menu-button span:nth-child(1) {
+    top: 0px;
+}
+.menu-button span:nth-child(2) {
+    top: 15px;
+}
+.menu-button span:nth-child(3) {
+    top: 30px;
+}
+.menu-button.open span:nth-child(1) {
+    top: 18px;
+    transform: rotate(135deg);
+}
+.menu-button.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+.menu-button.open span:nth-child(3) {
+    top: 18px;
+    transform: rotate(-135deg);
+}
+.menu-cover {
+    width: 6vw;
+    height: 100vh;
+    position: fixed;
+    bottom: 100vh;
+    background: #222;
+    z-index: 50;
+}
+nav {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    left: 100vw;
+    z-index: 100;
+}
+nav ul {
+    height: 100vh;
+    width: 94vw;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+nav li {
+    margin-right: -4px;
+    display: inline-block;
+    background-size: cover;
+    background-color: #111;
+}
+nav a {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 47vw;
+    color: white;
+    text-decoration: none;
+    font-family: "Bebas Neue", "Open Sans", sans-serif;
+    font-size: 3em;
+    background-color: rgba(0, 0, 0, .5);
+    transition: .5s;
+}
+nav li:hover a {
+    background-color: transparent;
+    transition: .5s;
+}
+nav li:nth-child(1) {
+    background-image: url(../images/menu/1.jpg)
+}
+nav li:nth-child(2) {
+    background-image: url(../images/menu/2.jpg)
+}
+nav li:nth-child(3) {
+    background-image: url(../images/menu/3.jpg)
+}
+nav li:nth-child(4) {
+    background-image: url(../images/menu/4.jpg)
+}
+@media (max-width: 900px) {
+    nav li {
+        margin-right: 0;
+        display: block;
+        background-position: center;
+    }
+    nav a {
+        display: block;
+        height: 25vh;
+        width: 100vw;
+        font-size: 5em;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+}
