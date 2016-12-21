@@ -36,8 +36,6 @@ group :development, :test do
 end
 
 group :development do
-    gem 'sqlite3', '1.3.12'
-
     # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
     gem 'web-console'
     gem 'listen', '~> 3.0.5'
